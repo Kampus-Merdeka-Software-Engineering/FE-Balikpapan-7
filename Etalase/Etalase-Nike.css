@@ -5,7 +5,69 @@ body{
     margin: 0;
     padding: 0;
 }
-a .bx{
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 16px;
+    margin-top: 19px;
+    margin-left: 80px;
+}
+nav ul {
+    list-style: none;
+    margin-top:19px;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent 90%,
+        #0E2941 90%,
+        #0E2941 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
+}
+nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+nav ul li:hover{
+    background-size: 100% 100%;
+    background-position: left;
+}
+.button {
+    margin-top: 19px;
+    margin-right: 80px;
+}
+.button-login {
+    background-color: #0E2941;
+    color:#D9E8FF;
+    padding:6px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0;
+}
+.button-signin {
+    background-color: #D9E8FF;
+    color:#0E2941;
+    padding:6px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0;
+}
+.button-login:hover{
+    background-color: #001120;
+}
+.button-signin:hover{
+    background-color: #a9c6f2;
+}
+.arrow-back a .bx{
     font-size: 40px;
     margin: 40px auto 40px 40px;
     color: #000;
