@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+@import url(https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Slackey&display=swap);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 50px;
+    font-family: "Racing Sans One", sans-serif;
+}
+nav ul {
+    list-style: none;
+    margin-top:20px;
+}
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent 90%,
+        #0E2941 90%,
+        #0E2941 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
+}
+nav a {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+nav ul li:hover{
+    background-size: 100% 100%;
+    background-position: left;
+}
+.button {
+    margin-top: 19px;
+    margin-right: 80px;
+}
+.button a .bx, .button .bx{
+    color: #001120;
+    font-size: 30px;
+    padding-inline: 5px;
+    margin: 0;
+}
+.button a .bx:hover{
+    transform: scale(1.2);
+    color: #0E2941;
+}
+.button .bx:hover{
+    transform: scale(1.2);
+    color: #0E2941;
+    cursor: pointer;
+}
+
+
+.arrow-back a .bx{
+    font-size: 40px;
+    margin: 40px auto 40px 40px;
+    color: #000;
+}
+.products{
+    display: grid;
+    grid-template-areas: "product product product";
+    padding-bottom: 0px;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 98px;
+    row-gap: 30px;
+    margin-bottom: 30px;
+}
+.products .product {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.10);
+}
+.products .product img{
+    width:280px;
+    height: 150px;
+    padding: 27px 10px 0 10px;
+}
+.products .product h3{
+    font-size: 15px;
+    padding: 15px 34px 0px 27px;
+    margin-bottom: 0;
+}
+.products .product p{
+    font-size: 12px;
+    padding: 0px 190px 5px 27px;
+    margin-top: 0;
+}
+.products .product a{
+    width: 75px;
+    height: 25px;
+    border-radius: 5px;
+    background: #000;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 8px;
+    padding: 7px 12px;
+    margin: 0px 198px 22px 27px;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity ease 250ms;
+}
+.products .product a:hover{
+    opacity: 1;
+}
