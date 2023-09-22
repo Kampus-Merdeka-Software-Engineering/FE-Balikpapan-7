@@ -71,9 +71,50 @@ nav ul li:hover{
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: white;
+  background-image: url(../Img/bg-loginpage.png);
   background-size: cover;
   background-position: center;
+  margin: 0;
+}
+.home-lineup{
+  text-align: center;
+  padding-top: 200px;
+}
+.home-lineup h4{
+ font-size: 30px;
+}
+.home-lineup h3{
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.home-lineup h2{
+  font-size: 15px;
+  font-weight: 400;
+}
+.home-lineup button{
+  margin-top: 30px;
+  color: #fff;
+  border-style: none;
+  background-color: #001120;
+  cursor: pointer;
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+.home.show::before {
+  opacity: 1;
+  pointer-events: auto;
 }
 /* From */
 .form_container {
@@ -96,13 +137,13 @@ nav ul li:hover{
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
 }
-.signup_form {
+.login_form {
   display: none;
 }
-.form_container.active .signup_form {
+.form_container.active .login_form {
   display: block;
 }
-.form_container.active .login_form {
+.form_container.active .signup_form {
   display: none;
 }
 .form_close {
@@ -192,6 +233,7 @@ nav ul li:hover{
   width: 100%;
   padding: 10px 0;
   border-radius: 10px;
+  cursor: pointer;
 }
 .login_signup {
   font-size: 12px;
