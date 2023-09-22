@@ -24,9 +24,9 @@ pwShowHide.forEach((icon) => {
 
 signupBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  formContainer.classList.add("active");
+  formContainer.classList.remove("active");
 });
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  formContainer.classList.remove("active");
+  formContainer.classList.add("active");
 });
