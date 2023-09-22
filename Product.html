@@ -2,7 +2,7 @@
     <head>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="./Css/Product.css">
-        <title>Products</title>
+        <title>Products | SEVEN CHIC STYLE </title>
     </head>
     <body>
 <!-- Header -->
@@ -23,19 +23,14 @@
 
 
 <!-- Slideshow Container -->
-        <section class="slideshow-container">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img id="slide-1" src="./Img/banner1.png" alt="banner 1"/>
-                    <img id="slide-2" src="./Img/banner2.png" alt="banner 2"/>
-                    <img id="slide-3" src="./Img/banner3.png" alt="banner 3"/>
-                </div>
-                <div class="slider-nav">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>   
-                    <a href="#slide-3"></a>   
-                </div>
-            </div>
+        <section class="slider-wrapper">
+            <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+            <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+            <ul class="slides-container" id="slides-container">
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+            </ul>
         </section>
 
 <!-- Category Section -->
@@ -307,5 +302,6 @@
                 <p>Copyright 2023 Seven Chic Style. All Rights Reserved.<p></p>
             </div>
         </footer>
+    <script src="./Js/Product.js"></script>
     </body>
 </html>    
