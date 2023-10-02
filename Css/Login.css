@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Slackey&display=swap);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 50px;
+    font-family: "Racing Sans One", sans-serif;
+}
+nav ul {
+    list-style: none;
+    margin-top:20px;
+}
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent 90%,
+        #0E2941 90%,
+        #0E2941 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
+}
+nav a {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+nav ul li:hover{
+    background-size: 100% 100%;
+    background-position: left;
+}
+.button {
+    margin-top: 19px;
+    margin-right: 80px;
+}
+.button a .bx, .button .bx{
+    color: #001120;
+    font-size: 30px;
+    padding-inline: 5px;
+    margin: 0;
+}
+.button a .bx:hover{
+    transform: scale(1.2);
+    color: #0E2941;
+}
+.button .bx:hover{
+    transform: scale(1.2);
+    color: #0E2941;
+    cursor: pointer;
+}
+@media only screen and (max-width:1200px){
+  .logo {
+      font-size: 24px;
+      margin-top: 14px;
+      margin-left: 49px;
+  }
+  nav ul {
+      margin-top:19px;
+  }
+  nav ul li {
+      margin-right: 24px;
+  }
+  nav a {
+      font-size: 16px;
+  }
+  .button {
+      margin-top: 18px;
+      margin-right: 79px;
+  }
+  .button a .bx, .button .bx{
+      font-size: 29px;
+      padding-inline: 4px;
+  }
+}
+@media only screen and (max-width:1024px){
+  .logo {
+      font-size: 22px;
+      margin-top: 12px;
+      margin-left: 47px;
+  }
+  nav ul {
+      margin-top:17px;
+  }
+  nav ul li {
+      margin-right: 22px;
+  }
+  nav a {
+      font-size: 14px;
+  }
+  .button {
+      margin-top: 16px;
+      margin-right: 77px;
+  }
+  .button a .bx, .button .bx{
+      font-size: 27px;
+      padding-inline: 3px;
+  }
+}
+@media only screen and (max-width:960px){
+  .logo {
+      font-size: 21px;
+      margin-top: 13px;
+      margin-left: 46px;
+  }
+  nav ul {
+      margin-top:16px;
+  }
+  nav ul li {
+      margin-right: 21px;
+  }
+  nav a {
+      font-size: 13px;
+  }
+  .button {
+      margin-top: 15px;
+      margin-right: 76px;
+  }
+  .button a .bx, .button .bx{
+      font-size: 26px;
+  }
+}
+@media only screen and (max-width:768px){
+  .logo {
+      font-size: 19px;
+      margin-top: 13px;
+      margin-left: 45px;
+  }
+  nav ul {
+      margin-top:15px;
+  }
+  nav ul li {
+      margin-right: 20px;
+  }
+  nav a {
+      font-size: 12px;
+  }
+  .button {
+      margin-top: 14px;
+      margin-right: 75px;
+  }
+  .button a .bx, .button .bx{
+      font-size: 23px;
+  }
+}
+
+/* Home Login Signin*/
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../Assets/Img/bg-loginpage.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+.home-lineup{
+  text-align: center;
+  padding-top: 200px;
+}
+.home-lineup h4{
+ font-size: 30px;
+}
+.home-lineup h3{
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.home-lineup h2{
+  font-size: 15px;
+  font-weight: 400;
+}
+.home-lineup button{
+  margin-top: 30px;
+  color: #fff;
+  border-style: none;
+  background-color: #001120;
+  cursor: pointer;
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+.home.show::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media only screen and (max-width:1200px){
+  .home {
+    height: 90vh;
+  }
+}
+@media only screen and (max-width:1024px){
+  .home {
+    height: 80vh;
+  }
+}
+@media only screen and (max-width:960px){
+  .home {
+    height: 85vh;
+  }
+  .home-lineup{
+    text-align: center;
+    padding-top: 150px;
+  }
+}
+@media only screen and (max-width:768px){
+  .home-lineup{
+    padding-top: 150px;
+  }
+  .home-lineup h4{
+   font-size: 28px;
+  }
+  .home-lineup h3{
+    font-size: 13px;
+    margin-top: 25px;
+  }
+  .home-lineup h2{
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width:430px){
+  .home-lineup{
+    padding-top: 130px;
+  }
+  .home-lineup h4{
+   font-size: 26px;
+  }
+  .home-lineup h3{
+    font-size: 11px;
+    margin-top: 23px;
+  }
+  .home-lineup h2{
+    font-size: 11px;
+  }
+}
+
+/* From */
+.form_container {
+  position: fixed;
+  max-width: 320px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 101;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-out;
+}
+.home.show .form_container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.login_form {
+  display: none;
+}
+.form_container.active .login_form {
+  display: block;
+}
+.form_container.active .signup_form {
+  display: none;
+}
+.form_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #0b0217;
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.form_container h2 {
+  font-size: 22px;
+  color: #0b0217;
+  text-align: center;
+}
+.input_box {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+.input_box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-bottom: 1.5px solid #aaaaaa;
+}
+.input_box input:focus {
+  border-color: #7d2ae8;
+}
+.input_box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #707070;
+}
+.input_box i.email,
+.input_box i.password {
+  left: 0;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password {
+  color: #;
+}
+.input_box i.pw_hide {
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_container a {
+  color: #001120;
+  font-size: 12px;
+}
+.form_container a:hover {
+  text-decoration: underline;
+}
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+.checkbox input {
+  accent-color: #001120;
+}
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #0b0217;
+}
+.form_container .button {
+  background: #001120;
+  color: #fff;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.login_signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+@media only screen and (max-width:430px){
+  .form_container {
+    max-width: 160px;
+    padding: 12px;
+    border-radius: 6px;
+  }
+  .form_close {
+    top: 5px;
+    right: 10px;
+    font-size: 11px;
+  }
+  .form_container h2 {
+    font-size: 11px;
+  }
+  .input_box {
+    margin-top: 15px;
+    height: 20px;
+    align-items: center;
+  }
+  .input_box input {
+    padding: 0 15px;
+    font-size: 8px;
+  }
+  .input_box i {
+    font-size: 10px;
+  }
+  .input_box i.pw_hide {
+    font-size: 9px;
+  }
+  .option_field {
+    margin-top: 7px;
+  }
+  .form_container a {
+    font-size: 6px;
+  }
+  .checkbox {
+    column-gap: 4px;
+    align-items: center;
+  }
+  .checkbox label {
+    font-size: 6px;
+  }
+  .form_container .button {
+    margin-top: 15px;
+    padding: 5px 0;
+    border-radius: 5px;
+    font-size: 8px;
+  }
+  .login_signup {
+    font-size: 6px;
+    margin-top: 7px;
+  }
+}

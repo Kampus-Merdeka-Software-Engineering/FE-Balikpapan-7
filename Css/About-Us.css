@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+@import url(https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Slackey&display=swap);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 50px;
+    font-family: "Racing Sans One", sans-serif;
+}
+nav ul {
+    list-style: none;
+    margin-top:20px;
+}
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent 90%,
+        #0E2941 90%,
+        #0E2941 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
+}
+nav a {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+nav ul li:hover{
+    background-size: 100% 100%;
+    background-position: left;
+}
+.button {
+    margin-top: 19px;
+    margin-right: 80px;
+}
+.button a .bx, .button .bx{
+    color: #001120;
+    font-size: 30px;
+    padding-inline: 5px;
+    margin: 0;
+}
+.button a .bx:hover{
+    transform: scale(1.2);
+    color: #0E2941;
+}
+.button .bx:hover{
+    transform: scale(1.2);
+    color: #0E2941;
+    cursor: pointer;
+}
+@media only screen and (max-width:1200px){
+    .logo {
+        font-size: 24px;
+        margin-top: 14px;
+        margin-left: 49px;
+    }
+    nav ul {
+        margin-top:19px;
+    }
+    nav ul li {
+        margin-right: 24px;
+    }
+    nav a {
+        font-size: 16px;
+    }
+    .button {
+        margin-top: 18px;
+        margin-right: 79px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 29px;
+        padding-inline: 4px;
+    }
+}
+@media only screen and (max-width:1024px){
+    .logo {
+        font-size: 22px;
+        margin-top: 12px;
+        margin-left: 47px;
+    }
+    nav ul {
+        margin-top:17px;
+    }
+    nav ul li {
+        margin-right: 22px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    .button {
+        margin-top: 16px;
+        margin-right: 77px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 27px;
+        padding-inline: 3px;
+    }
+}
+@media only screen and (max-width:960px){
+    .logo {
+        font-size: 21px;
+        margin-top: 13px;
+        margin-left: 46px;
+    }
+    nav ul {
+        margin-top:16px;
+    }
+    nav ul li {
+        margin-right: 21px;
+    }
+    nav a {
+        font-size: 13px;
+    }
+    .button {
+        margin-top: 15px;
+        margin-right: 76px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 26px;
+    }
+}
+@media only screen and (max-width:768px){
+    .logo {
+        font-size: 19px;
+        margin-top: 13px;
+        margin-left: 45px;
+    }
+    nav ul {
+        margin-top:15px;
+    }
+    nav ul li {
+        margin-right: 20px;
+    }
+    nav a {
+        font-size: 12px;
+    }
+    .button {
+        margin-top: 14px;
+        margin-right: 75px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 23px;
+    }
+}
+
+/* Card Container */
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.container .card
+{
+    width: 330px;
+    height: 416px;
+    padding: 60px 30px;
+    margin: 20px;
+    background: #e4e9ee;
+    box-shadow: 0.6em 0.6em 1.2em #838f9e,
+                -0.5em -0.5em 1em #ffffff;
+    border-radius: 20px;            
+}
+.container .card .content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .card .content .imgBx
+{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.container .card .content .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .card .content .contentBx h4
+{
+    color: #15304e;
+    font-size:19px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.container .card .content .contentBx h5
+{
+    color: #697f98;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+.container .card .content .sci
+{
+    margin: 0;
+}
+.container .card .content .sci a
+{
+    text-decoration: none;
+    color: #6c758f;
+    font-size: 25px;
+    margin: 5px;
+    transition: color 0.4s;
+}
+.container .card .content .sci a :hover
+{
+    color: #0196e3;
+    transform: scale(1.1);
+}
+@media only screen and (max-width:768px){
+    .container
+    {
+        margin-top: 12px;
+    }
+    .container .card
+    {
+        width: 165px;
+        height: 208px;
+        padding: 30px 15px;
+        margin: 10px;
+        border-radius: 10px;            
+    }
+    .container .card .content .imgBx
+    {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    .container .card .content .contentBx h4
+    {
+        font-size: 9.5px;
+        letter-spacing: 1px;
+    }
+    .container .card .content .contentBx h5
+    {
+        font-size: 7px;
+        padding: 5px;
+    }
+    .container .card .content .sci a
+    {
+        font-size: 12px;
+        margin: 2px;
+    }
+}
