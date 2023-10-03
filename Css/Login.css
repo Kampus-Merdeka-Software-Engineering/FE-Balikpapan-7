@@ -17,19 +17,24 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 .logo {
     font-size: 25px;
-    margin-top: 15px;
     margin-left: 50px;
     font-family: "Racing Sans One", sans-serif;
 }
-nav ul {
-    list-style: none;
-    margin-top:20px;
+#menu-icon{
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
 }
-nav ul li {
-    display: inline;
+.navlist {
+    list-style: none;
+    display: flex;
+}
+.navlist li {
     margin-right: 25px;
     background-image: linear-gradient(
         transparent 0%,
@@ -42,127 +47,165 @@ nav ul li {
     background-position-x: right;
     transition: background-size 300ms;
 }
-nav a {
+.navlist a {
     text-decoration: none;
     font-size: 17px;
     color: black;
+    font-weight: 300;
 }
-nav ul li:hover{
+.navlist li:hover{
     background-size: 100% 100%;
     background-position: left;
 }
 .button {
-    margin-top: 19px;
-    margin-right: 80px;
+  margin-right: 80px;
 }
 .button a .bx, .button .bx{
-    color: #001120;
-    font-size: 30px;
-    padding-inline: 5px;
-    margin: 0;
+  color: #001120;
+  font-size: 30px;
+  padding-inline: 5px;
+  margin: 0;
 }
 .button a .bx:hover{
-    transform: scale(1.2);
-    color: #0E2941;
+  transform: scale(1.2);
+  color: #0E2941;
 }
 .button .bx:hover{
-    transform: scale(1.2);
-    color: #0E2941;
-    cursor: pointer;
+  transform: scale(1.2);
+  color: #0E2941;
+  cursor: pointer;
 }
 @media only screen and (max-width:1200px){
-  .logo {
-      font-size: 24px;
-      margin-top: 14px;
-      margin-left: 49px;
-  }
-  nav ul {
-      margin-top:19px;
-  }
-  nav ul li {
-      margin-right: 24px;
-  }
-  nav a {
-      font-size: 16px;
-  }
-  .button {
-      margin-top: 18px;
-      margin-right: 79px;
-  }
-  .button a .bx, .button .bx{
-      font-size: 29px;
-      padding-inline: 4px;
-  }
+    header{
+        margin-top: 19px;
+    }
+    .logo {
+        font-size: 24px;
+        margin-left: 49px;
+    }
+    .navlist li {
+        margin-right: 24px;
+    }
+    .navlist a {
+        font-size: 16px;
+    }
+    .button {
+        margin-right: 79px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 29px;
+        padding-inline: 4px;
+    }
 }
 @media only screen and (max-width:1024px){
-  .logo {
-      font-size: 22px;
-      margin-top: 12px;
-      margin-left: 47px;
-  }
-  nav ul {
-      margin-top:17px;
-  }
-  nav ul li {
-      margin-right: 22px;
-  }
-  nav a {
-      font-size: 14px;
-  }
-  .button {
-      margin-top: 16px;
-      margin-right: 77px;
-  }
-  .button a .bx, .button .bx{
-      font-size: 27px;
-      padding-inline: 3px;
-  }
+    header{
+        margin-top: 18px;
+    }
+    .logo {
+        font-size: 22px;
+        margin-left: 47px;
+    }
+    .navlist li {
+        margin-right: 22px;
+    }
+    .navlist a {
+        font-size: 14px;
+    }
+    .button {
+        margin-right: 77px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 27px;
+        padding-inline: 3px;
+    }
 }
 @media only screen and (max-width:960px){
-  .logo {
-      font-size: 21px;
-      margin-top: 13px;
-      margin-left: 46px;
-  }
-  nav ul {
-      margin-top:16px;
-  }
-  nav ul li {
-      margin-right: 21px;
-  }
-  nav a {
-      font-size: 13px;
-  }
-  .button {
-      margin-top: 15px;
-      margin-right: 76px;
-  }
-  .button a .bx, .button .bx{
-      font-size: 26px;
-  }
+    header{
+        margin-top: 16px;
+    }
+    .logo {
+        font-size: 21px;
+        margin-left: 46px;
+    }
+    nav ul li {
+        margin-right: 21px;
+    }
+    nav a {
+        font-size: 13px;
+    }
+    .button {
+        margin-right: 76px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 26px;
+    }
 }
 @media only screen and (max-width:768px){
-  .logo {
-      font-size: 19px;
-      margin-top: 13px;
-      margin-left: 45px;
-  }
-  nav ul {
-      margin-top:15px;
-  }
-  nav ul li {
-      margin-right: 20px;
-  }
-  nav a {
-      font-size: 12px;
-  }
-  .button {
-      margin-top: 14px;
-      margin-right: 75px;
-  }
-  .button a .bx, .button .bx{
-      font-size: 23px;
-  }
+    header{
+        margin-top: 16px;
+    }
+    .logo {
+        font-size: 19px;
+        margin-left: 45px;
+    }
+    .navlist li {
+        margin-right: 20px;
+    }
+    .navlist a {
+        font-size: 12px;
+    }
+    .button {
+        margin-right: 75px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 23px;
+    }
+}
+@media only screen and (max-width:430px){
+    header{
+        margin-top: 15px;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .logo {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .navlist{
+        position: absolute;
+        top: -300px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #001120;
+        text-align: left;
+    }
+    .navlist li:hover{
+        background-size: 0%;
+    }
+    .navlist a {
+        font-size: 12px;
+        color: white;
+        padding: 1rem;
+        border-left: 2px solid #fff;
+        margin: 1rem;
+        display: block;
+    }
+    .navlist a:hover{
+        background-color: #fff;
+        color: #001120;
+    }
+    .navlist.open{
+        top: 10%;
+    }
+    .button {
+        margin-right: 20px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 26px;
+    }
 }
 
 /* Home Login Signin*/
