@@ -17,19 +17,24 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 .logo {
     font-size: 25px;
-    margin-top: 15px;
     margin-left: 50px;
     font-family: "Racing Sans One", sans-serif;
 }
-nav ul {
-    list-style: none;
-    margin-top:20px;
+#menu-icon{
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
 }
-nav ul li {
-    display: inline;
+.navlist {
+    list-style: none;
+    display: flex;
+}
+.navlist li {
     margin-right: 25px;
     background-image: linear-gradient(
         transparent 0%,
@@ -42,56 +47,164 @@ nav ul li {
     background-position-x: right;
     transition: background-size 300ms;
 }
-nav a {
+.navlist a {
     text-decoration: none;
     font-size: 17px;
     color: black;
+    font-weight: 300;
 }
-nav ul li:hover{
+.navlist li:hover{
     background-size: 100% 100%;
     background-position: left;
 }
 .button {
-    margin-top: 19px;
-    margin-right: 80px;
+  margin-right: 80px;
 }
 .button a .bx, .button .bx{
-    color: #001120;
-    font-size: 30px;
-    padding-inline: 5px;
-    margin: 0;
+  color: #001120;
+  font-size: 30px;
+  padding-inline: 5px;
+  margin: 0;
 }
 .button a .bx:hover{
-    transform: scale(1.2);
-    color: #0E2941;
+  transform: scale(1.2);
+  color: #0E2941;
 }
 .button .bx:hover{
-    transform: scale(1.2);
-    color: #0E2941;
-    cursor: pointer;
+  transform: scale(1.2);
+  color: #0E2941;
+  cursor: pointer;
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:1200px){
+    header{
+        margin-top: 19px;
+    }
     .logo {
-        font-size: 12px;
-        margin-top: 15px;
-        margin-left: 25px;
+        font-size: 24px;
+        margin-left: 49px;
     }
-    nav ul {
-        margin-top:10px;
+    .navlist li {
+        margin-right: 24px;
     }
-    nav ul li {
-        margin-right: 12px;
-    }
-    nav a {
-        font-size: 8px;
+    .navlist a {
+        font-size: 16px;
     }
     .button {
-        margin-top: 10px;
-        margin-right: 40px;
+        margin-right: 79px;
     }
     .button a .bx, .button .bx{
-        font-size: 15px;
+        font-size: 29px;
+        padding-inline: 4px;
+    }
+}
+@media only screen and (max-width:1024px){
+    header{
+        margin-top: 18px;
+    }
+    .logo {
+        font-size: 22px;
+        margin-left: 47px;
+    }
+    .navlist li {
+        margin-right: 22px;
+    }
+    .navlist a {
+        font-size: 14px;
+    }
+    .button {
+        margin-right: 77px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 27px;
         padding-inline: 3px;
+    }
+}
+@media only screen and (max-width:960px){
+    header{
+        margin-top: 16px;
+    }
+    .logo {
+        font-size: 21px;
+        margin-left: 46px;
+    }
+    nav ul li {
+        margin-right: 21px;
+    }
+    nav a {
+        font-size: 13px;
+    }
+    .button {
+        margin-right: 76px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 26px;
+    }
+}
+@media only screen and (max-width:768px){
+    header{
+        margin-top: 16px;
+    }
+    .logo {
+        font-size: 19px;
+        margin-left: 45px;
+    }
+    .navlist li {
+        margin-right: 20px;
+    }
+    .navlist a {
+        font-size: 12px;
+    }
+    .button {
+        margin-right: 75px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 23px;
+    }
+}
+@media only screen and (max-width:430px){
+    header{
+        margin-top: 15px;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .logo {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .navlist{
+        position: absolute;
+        top: -300px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #001120;
+        text-align: left;
+    }
+    .navlist li:hover{
+        background-size: 0%;
+    }
+    .navlist a {
+        font-size: 12px;
+        color: white;
+        padding: 1rem;
+        border-left: 2px solid #fff;
+        margin: 1rem;
+        display: block;
+    }
+    .navlist a:hover{
+        background-color: #fff;
+        color: #001120;
+    }
+    .navlist.open{
+        top: 10%;
+    }
+    .button {
+        margin-right: 20px;
+    }
+    .button a .bx, .button .bx{
+        font-size: 26px;
     }
 }
 
@@ -148,74 +261,156 @@ nav ul li:hover{
 .products .product a:hover{
     opacity: 1;
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:1200px){
     .arrow-back a .bx{
-        font-size: 20px;
-        margin: 20px auto 20px 20px;
+        font-size: 39px;
+        margin: 39px auto 39px 39px;
     }
     .products{
-        column-gap: 49px;
-        row-gap: 15px;
-        margin-bottom: 15px;
+        column-gap: 95px;
+        row-gap: 29px;
+        margin-bottom: 29px;
     }
     .products .product {
-        width: 150px;
+        width: 290px;
+        height: 280px;
+        border-radius: 11px;
+    }
+    .products .product img{
+        width: 270px;
         height: 150px;
+        margin: 26px 9px 0 14px;
+    }
+    .products .product h3{
+        font-size: 12px;
+        margin: 14px 33px 0px 26px;
+    }
+    .products .product p{
+        font-size: 10px;
+        margin: 0 180px 0 26px;
+    }
+    .products .product a{
+        width: 73px;
+        height: 23px;
+        border-radius: 4px;
+        font-size: 7px;
+    }
+}
+@media only screen and (max-width:1024px){
+    .arrow-back a .bx{
+        font-size: 37px;
+        margin: 37px auto 37px 37px;
+    }
+    .products{
+        column-gap: 60px;
+        row-gap: 25px;
+        margin-bottom: 25px;
+    }
+    .products .product {
+        width: 270px;
+        height: 250px;
+        border-radius: 9px;
+    }
+    .products .product img{
+        width: 250px;
+        height: 130px;
+        margin: 24px 7px 0 12px;
+    }
+    .products .product h3{
+        font-size: 11px;
+        margin: 12px 31px 0px 24px;
+    }
+    .products .product p{
+        font-size: 10px;
+        margin: 0 170px 0 24px;
+    }
+    .products .product a{
+        width: 71px;
+        height: 21px;
+        border-radius: 3px;
+        font-size: 6px;
+    }
+}
+@media only screen and (max-width:960px){
+    .arrow-back a .bx{
+        font-size: 35px;
+        margin: 35px auto 35px 35px;
+    }
+    .products{
+        column-gap: 40px;
+        row-gap: 23px;
+        margin-bottom: 23px;
+    }
+    .products .product {
+        width: 260px;
+        height: 240px;
+        border-radius: 8px;
+    }
+    .products .product img{
+        width: 240px;
+        height: 120px;
+        margin: 22px 6px 0 10px;
+    }
+    .products .product h3{
+        font-size: 11px;
+        margin: 12px 31px 0px 24px;
+    }
+    .products .product p{
+        font-size: 10px;
+        margin: 0 170px 0 24px;
+    }
+    .products .product a{
+        width: 71px;
+        height: 21px;
+        border-radius: 3px;
+        font-size: 6px;
+    }
+}
+@media only screen and (max-width:768px){
+    .arrow-back a .bx{
+        font-size: 33px;
+        margin: 33px auto 33px 33px;
+    }
+    .products{
+        column-gap: 35px;
+        row-gap: 20px;
+        margin-bottom: 23px;
+        display: grid;
+        grid-template-areas: "product product";
+    }
+}
+@media only screen and (max-width:430px){
+    .products{
+        column-gap: 35px;
+        row-gap: 20px;
+        margin-bottom: 23px;
+        display: grid;
+        grid-template-areas: "product product";
+    }
+    .products .product {
+        width: 160px;
+        height: 150px;
+        border-radius: 8px;
     }
     .products .product img{
         width: 140px;
-        height: 80px;
-        margin: 13px 5px 0 7px;
+        height: 70px;
+        margin: 15px 3px 0 5px;
     }
     .products .product h3{
-        font-size: 6px;
-        margin: 7px 17px 0px 13px;
+        font-size: 8px;
+        margin: 5px 15px 0px 15px;
     }
     .products .product p{
         font-size: 6px;
-        margin: 0 60px 0 13px;
+        margin: 0 100px 0 15px;
     }
     .products .product a{
-        width: 37px;
-        height: 5px;
-        font-size: 4px;
-        padding: 3px 6px;
-        margin-left: 13px;
-        border-radius: 2px;
-    }
-}
-@media only screen and (max-width:480px){
-    .arrow-back a .bx{
-        font-size: 18px;
-        margin: 20px auto 20px 20px;
-    }
-    .products{
-        column-gap: 30px;
-        row-gap: 10px;
-        margin-bottom: 10px;
-    }
-    .products .product {
-        width: 120px;
-        height: 120px;
-    }
-    .products .product img{
-        width: 100px;
-        height: 55px;
-        margin: 8px 5px 0 7px;
-    }
-    .products .product h3{
-        font-size: 5px;
-    }
-    .products .product p{
+        width: 50px;
+        height: 15px;
+        border-radius: 3px;
         font-size: 6px;
-        margin: 0 60px 0 13px;
-    }
-    .products .product a{
-        width: 30px;
-        height: 5px;
-        font-size: 4px;
-        padding: 3px 6px;
-        margin-left: 13px;
-        border-radius: 2px;
+        padding: 5px 8px;
+        margin-left: 20px;
     }
 }
