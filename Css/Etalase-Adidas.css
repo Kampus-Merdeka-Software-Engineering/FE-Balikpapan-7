@@ -181,6 +181,7 @@ header{
         flex-direction: column;
         background-color: #001120;
         text-align: left;
+        transition: all .50s ease;
     }
     .navlist li:hover{
         background-size: 0%;
