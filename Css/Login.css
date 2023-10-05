@@ -181,6 +181,7 @@ header{
         flex-direction: column;
         background-color: #001120;
         text-align: left;
+        z-index: 1000;
     }
     .navlist li:hover{
         background-size: 0%;
@@ -384,7 +385,7 @@ header{
 }
 .input_box input:focus ~ i.email,
 .input_box input:focus ~ i.password {
-  color: #;
+  color: black;
 }
 .input_box i.pw_hide {
   right: 0;
