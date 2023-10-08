@@ -4,7 +4,7 @@ const fetchTeams = async () => {
     const TeamsContainer = document.getElementById("teams")
 
     const teams = await fetch(`${API_URL}/teams`)
-    const data = await teams.json()
+    const data = await response.json()
     console.log(data)
 
     data.data.forEach((element) => {
