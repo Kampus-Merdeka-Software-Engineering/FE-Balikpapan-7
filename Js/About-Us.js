@@ -1,13 +1,13 @@
-const API_URL = "https://be-balikpapan-7-production.up.railway.app";
+const API_URL = "https://furry-ticket-production.up.railway.app";
 
-const fetchTeams = async () => {
-    const TeamsContainer = document.getElementById("teams")
+const fetchTeam = async () => {
+    const TeamsContainer = document.getElementById("team")
 
     const teams = await fetch(`${API_URL}/teams`)
-    const data = await response.json()
+    const data = await teams.json()
     console.log(data)
 
-    data.data.forEach((element) => {
+    data.forEach((element) => {
         console.log(element)
         const newTeams = document.createElement('div')
         newTeams.classList.add()
@@ -39,4 +39,4 @@ const fetchTeams = async () => {
 
 };
 
-fetchTeams()
+fetchTeam()
