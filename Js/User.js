@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (data.success) {
               // Authentication successful
               messageDiv.innerHTML = 'Sign in successfull! Redirecting...';
-              window.location.href = '/dashboard'; // Redirect to dashboard or another page
+              window.location.href = '/index.html'; // Redirect to home page
           } else {
               messageDiv.innerHTML = 'Sign in successfull! Redirecting...';
           }
